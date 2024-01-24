@@ -19,27 +19,30 @@
     "node": ">=4"
   },
   "scripts": {
+    "build": "grunt build",
     "test": "grunt test"
   },
-  "dependencies": {},
+  "dependencies": {
+  },
   "devDependencies": {
-    "autoprefixer": "^7.1.2",
-    "coffee-script": ">= 1.6",
-    "grunt": "~1.0",
-    "grunt-contrib-coffee": "~1.0",
-    "grunt-contrib-copy": "^1.0.0",
-    "grunt-contrib-concat": "~1.0",
-    "grunt-contrib-cssmin": "~2.2",
-    "grunt-contrib-jasmine": "~1.1",
-    "grunt-contrib-uglify": "~3.0",
-    "grunt-contrib-watch": "~1.0",
-    "grunt-gh-pages": "~2.0",
-    "grunt-postcss": "^0.8.0",
-    "grunt-sass": "^2.0",
-    "grunt-zip": "~0.17.1",
-    "grunt1.0-dom-munger": "~3.4",
-    "load-grunt-tasks": "^3.5.2",
-    "simulant": "^0.2.2"
+    "autoprefixer": "*",
+    "coffeescript": "*",
+    "grunt": "*",
+    "grunt-contrib-coffee": "*",
+    "grunt-contrib-concat": "*",
+    "grunt-contrib-copy": "*",
+    "grunt-contrib-cssmin": "*",
+    "grunt-contrib-jasmine": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-gh-pages": "*",
+    "@lodder/grunt-postcss": "*",
+    "grunt-sass": "*",
+    "grunt-zip": "*",
+    "grunt1.0-dom-munger": "*",
+    "load-grunt-tasks": "*",
+    "node-sass": "*",
+    "simulant": "*"
   },
   "contributors": [
     {
