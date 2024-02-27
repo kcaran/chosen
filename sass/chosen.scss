@@ -1,407 +1,428 @@
-$denim:         #0079b6;
-$eggshell:		#f4f5f6;
-$heather:       #aec2cb;
-$shuttle:       #51626f;
-$tomato:        #c23a28;
-$white:         #ffffff;
+$denim: #0079b6;
+$eggshell: #f4f5f6;
+$heather: #aec2cb;
+$shuttle: #51626f;
+$tomato: #c23a28;
+$white: #ffffff;
 
 /* @group Base */
 .chosen-container {
-  position: relative;
-  display: inline-block;
-  vertical-align: middle;
-  font-size: 16px;
-  max-width: 300px;
-  color: $shuttle;
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 16px;
+	max-width: 300px;
+	color: $shuttle;
 
-  user-select: none;
-  * {
-    box-sizing: border-box;
-  }
-  .chosen-drop {
-    position: absolute;
-    top: 100%;
-    z-index: 1010;
-    width: 100%;
-    border: 1px solid $shuttle;
-    border-top: 0;
-    background: $white;
-    box-shadow: 0 4px 5px rgba(#000,.15);
-    clip: rect(0,0,0,0);
-    clip-path: inset(100% 100%);
-  }
-  &.chosen-with-drop .chosen-drop {
-    clip: auto;
-    clip-path: none;
-	border-color: $denim;
-  }
-  a{
-    cursor: pointer;
-  }
+	user-select: none;
+	* {
+		box-sizing: border-box;
+	}
+	.chosen-drop {
+		position: absolute;
+		top: 100%;
+		z-index: 1010;
+		width: 100%;
+		border: 1px solid $shuttle;
+		border-top: 0;
+		background: $white;
+		box-shadow: 0 4px 5px rgba(#000, 0.15);
+		clip: rect(0, 0, 0, 0);
+		clip-path: inset(100% 100%);
+	}
+	&.chosen-with-drop .chosen-drop {
+		clip: auto;
+		clip-path: none;
+		border-color: $denim;
+	}
+	a {
+		cursor: pointer;
+	}
 
-  .search-choice, .chosen-single{
-    .group-name{
-      margin-right: 4px;
-      overflow: hidden;
-      white-space: nowrap;
-      text-overflow: ellipsis;
-      font-weight: normal;
-      color: $shuttle;
-      &:after {
-        content: ":";
-        padding-left: 2px;
-        vertical-align: top;
-      }
-    }
-  }
+	.search-choice,
+	.chosen-single {
+		.group-name {
+			margin-right: 4px;
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			font-weight: normal;
+			color: $shuttle;
+			&:after {
+				content: ":";
+				padding-left: 2px;
+				vertical-align: top;
+			}
+		}
+	}
 }
 /* @end */
 
 /* @group Single Chosen */
-.chosen-container-single{
-  .chosen-single {
-    position: relative;
-    display: block;
-    overflow: hidden;
-    padding: 0 0 0 8px;
-	width: 100%;
-	height: 2em;
-    border: 1px solid $shuttle;
-    border-radius: 5px;
-	color: $shuttle;
-    background-color: $white;
-    background: linear-gradient(#fff 20%, #f6f6f6 50%, #eee 52%, #f4f4f4 100%);
-    background-clip: padding-box;
-    box-shadow: 0 0 3px #fff inset, 0 1px 1px rgba(#000,.1);
-    text-decoration: none;
-    white-space: nowrap;
-    line-height: 1.8em;
-  }
-  .chosen-default {
-    color: darken( $heather, 10% );
-  }
-  .chosen-single span {
-    display: block;
-    overflow: hidden;
-    margin-right: 26px;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-	line-height: 2em;
-  }
-  .chosen-single-with-deselect span {
-    margin-right: 38px;
-  }
-  .chosen-single abbr {
-    position: absolute;
-    display: block;
-    top: 0;
-    right: 1.5em;
-    width: 1.5em;
-    height: 100%;
-    background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="%238fabb7"%3E%3Cpath d="m336-280-56-56 144-144-144-143 56-56 144 144 143-144 56 56-144 143 144 144-56 56-143-144-144 144Z"/%3E%3C/svg%3E') center center / 1.5em 1.5em no-repeat;
-    &:hover {
-      background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="%2351626f"%3E%3Cpath d="m336-280-56-56 144-144-144-143 56-56 144 144 143-144 56 56-144 143 144 144-56 56-143-144-144 144Z"/%3E%3C/svg%3E') center center / 1.5em 1.5em no-repeat;
-    }
-  }
-  .chosen-single div {
-    position: absolute;
-    top: 0;
-    right: 0;
-    display: block;
-	width: 1.5em;
-    height: 100%;
-    b {
-      display: block;
-      width: 100%;
-      height: 100%;
-      $arrow_color: darken( $heather, 10% );
-      $down_arrow : url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" height="400" width="400" fill="%238fabb7"%3E%3Cpolygon points="200,250 10,60 390,60" class="triangle" /%3E%3C/svg%3E') 50% 66% / 0.8em 1em no-repeat;
-      background: $down_arrow;
+.chosen-container-single {
+	.chosen-single {
+		position: relative;
+		display: block;
+		overflow: hidden;
+		padding: 0 0 0 8px;
+		width: 100%;
+		height: 2em;
+		border: 1px solid $shuttle;
+		border-radius: 5px;
+		color: $shuttle;
+		background-color: $white;
+		background: linear-gradient(#fff 20%, #f6f6f6 50%, #eee 52%, #f4f4f4 100%);
+		background-clip: padding-box;
+		box-shadow:
+			0 0 3px #fff inset,
+			0 1px 1px rgba(#000, 0.1);
+		text-decoration: none;
+		white-space: nowrap;
+		line-height: 1.8em;
+	}
+	.chosen-default {
+		color: darken($heather, 10%);
+	}
+	.chosen-single span {
+		display: block;
+		overflow: hidden;
+		margin-right: 26px;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		line-height: 2em;
+	}
+	.chosen-single-with-deselect span {
+		margin-right: 38px;
+	}
+	.chosen-single abbr {
+		position: absolute;
+		display: block;
+		top: 0;
+		right: 1.5em;
+		width: 1.5em;
+		height: 100%;
+		background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="%238fabb7"%3E%3Cpath d="m336-280-56-56 144-144-144-143 56-56 144 144 143-144 56 56-144 143 144 144-56 56-143-144-144 144Z"/%3E%3C/svg%3E')
+			center center / 1.5em 1.5em no-repeat;
+		&:hover {
+			background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="%2351626f"%3E%3Cpath d="m336-280-56-56 144-144-144-143 56-56 144 144 143-144 56 56-144 143 144 144-56 56-143-144-144 144Z"/%3E%3C/svg%3E')
+				center center / 1.5em 1.5em no-repeat;
+		}
+	}
+	.chosen-single div {
+		position: absolute;
+		top: 0;
+		right: 0;
+		display: block;
+		width: 1.5em;
+		height: 100%;
+		b {
+			display: block;
+			width: 100%;
+			height: 100%;
+			$arrow_color: darken($heather, 10%);
+			$down_arrow: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" height="400" width="400" fill="%238fabb7"%3E%3Cpolygon points="200,250 10,60 390,60" class="triangle" /%3E%3C/svg%3E')
+				50% 66% / 0.8em 1em no-repeat;
+			background: $down_arrow;
 
-      @supports(-webkit-mask-image: url(#mask)) or (mask-image: url(#mask)) {
-        background: $arrow_color;
-        -webkit-mask: $down_arrow;
-        mask: $down_arrow;
-      }
-    }
-  }
-  .chosen-search {
-    position: relative;
-    z-index: 1010;
-    margin: 0;
-    padding: 3px 4px;
-    white-space: nowrap;
+			@supports (-webkit-mask-image: url(#mask)) or (mask-image: url(#mask)) {
+				background: $arrow_color;
+				-webkit-mask: $down_arrow;
+				mask: $down_arrow;
+			}
+		}
+	}
+	.chosen-search {
+		position: relative;
+		z-index: 1010;
+		margin: 0;
+		padding: 3px 4px;
+		white-space: nowrap;
 
-    input[type="text"] {
-      margin: 1px 0;
-      padding: 4px 2em 4px 5px;
-      width: 100%;
-      height: auto;
-      outline: 0;
-      border: 1px solid $shuttle;
-      background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="%238fabb7" %3E%3Cpath d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"/%3E%3C/svg%3E%0A') center right no-repeat;
+		input[type="text"] {
+			margin: 1px 0;
+			padding: 4px 2em 4px 5px;
+			width: 100%;
+			height: auto;
+			outline: 0;
+			border: 1px solid $shuttle;
+			background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="%238fabb7" %3E%3Cpath d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"/%3E%3C/svg%3E%0A')
+				center right no-repeat;
 
-      font-size: 1em;
-      font-family: sans-serif;
-      line-height: normal;
-      border-radius: 0;
-    }
-  }
+			font-size: 1em;
+			font-family: sans-serif;
+			line-height: normal;
+			border-radius: 0;
+		}
+	}
 
-  .chosen-drop {
-    border-radius: 0 0 4px 4px;
-    background-clip: padding-box;
-  }
+	.chosen-drop {
+		border-radius: 0 0 4px 4px;
+		background-clip: padding-box;
+	}
 
-  &.chosen-container-single-nosearch .chosen-search {
-    position: absolute;
-    clip: rect(0,0,0,0);
-    clip-path: inset(100% 100%);
-  }
+	&.chosen-container-single-nosearch .chosen-search {
+		position: absolute;
+		clip: rect(0, 0, 0, 0);
+		clip-path: inset(100% 100%);
+	}
 }
 /* @end */
 
 /* @group Results */
 .chosen-container .chosen-results {
-  position: relative;
-  overflow-x: hidden;
-  overflow-y: auto;
-  margin: 0 4px 4px 0;
-  padding: 0 0 0 4px;
-  max-height: 20em;
-  -webkit-overflow-scrolling: touch;
-  li {
-    display: none;
-    margin: 0;
-    padding: 0 6px;
-    list-style: none;
-    line-height: 2em;
-    word-wrap: break-word;
-    -webkit-touch-callout: none;
-    &.active-result {
-      display: list-item;
-      cursor: pointer;
-    }
-    &.disabled-result {
-      display: list-item;
-      color: $heather;
-      cursor: default;
-    }
-    &.highlighted {
-      background-color: $denim;
-      color: $white;
-    }
-    &.no-results {
-      color: $shuttle;
-      display: list-item;
-      background: $eggshell;
-    }
-    &.group-result {
-      display: list-item;
-      font-weight: bold;
-      cursor: default;
-      margin-top: 1em;
-      &:first-child {
-        margin-top: 0;
-      }
-    }
-    &.group-option {
-      padding-left: 1rem;
-    }
-    em {
-      font-style: normal;
-      text-decoration: underline;
-    }
-  }
+	position: relative;
+	overflow-x: hidden;
+	overflow-y: auto;
+	margin: 0 4px 4px 0;
+	padding: 0 0 0 4px;
+	max-height: 20em;
+	-webkit-overflow-scrolling: touch;
+	li {
+		display: none;
+		margin: 0;
+		padding: 0 6px;
+		list-style: none;
+		line-height: 2em;
+		word-wrap: break-word;
+		-webkit-touch-callout: none;
+		&.active-result {
+			display: list-item;
+			cursor: pointer;
+		}
+		&.disabled-result {
+			display: list-item;
+			color: $heather;
+			cursor: default;
+		}
+		&.highlighted {
+			background-color: $denim;
+			color: $white;
+		}
+		&.no-results {
+			color: $shuttle;
+			display: list-item;
+			background: $eggshell;
+		}
+		&.group-result {
+			display: list-item;
+			font-weight: bold;
+			cursor: default;
+			margin-top: 1em;
+			&:first-child {
+				margin-top: 0;
+			}
+		}
+		&.group-option {
+			padding-left: 1rem;
+		}
+		em {
+			font-style: normal;
+			text-decoration: underline;
+		}
+	}
 }
 /* @end */
 
 /* @group Multi Chosen */
-.chosen-container-multi{
-  .chosen-choices {
-    position: relative;
-    overflow: hidden;
-    margin: 0;
-    padding: 0.125em 5px;
-    width: 100%;
-    border: 1px solid $shuttle;
-    border-radius: 5px;
-    background-color: $white;
-    background-image: linear-gradient(#eee 1%, #fff 15%);
-    cursor: text;
-  }
-  .chosen-choices li {
-    float: left;
-    list-style: none;
-    &.search-field {
-      margin: 0;
-      padding: 0;
-      white-space: nowrap;
-      input[type="text"] {
-        margin: 0;
-        padding: 0;
-        height: 1.6em;
-        outline: 0;
-        border: 0 !important;
-        background: transparent !important;
-		color: $shuttle;
-        box-shadow: none;
-      }
-    }
-    &.search-choice {
-      position: relative;
-      margin: 3px 5px 3px 0;
-      padding: 0 1.5em 0 5px;
-      border: 1px solid $shuttle;
-      max-width: 100%;
-      border-radius: 5px;
-      background-color: $eggshell;
-      background-image: linear-gradient(#f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eee 100%);
-      background-size: 100% 19px;
-      background-repeat: repeat-x;
-      background-clip: padding-box;
-      box-shadow: 0 0 2px #fff inset, 0 1px 0 rgba(#000,.05);
-      cursor: default;
-      span {
-        word-wrap: break-word;
-      }
-      .search-choice-close {
-        position: absolute;
-        top: 0;
-        right: 0;
-        display: block;
-        width: 1.5em;
-        height: 100%;
-        background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="%238fabb7"%3E%3Cpath d="m336-280-56-56 144-144-144-143 56-56 144 144 143-144 56 56-144 143 144 144-56 56-143-144-144 144Z"/%3E%3C/svg%3E') center center / 1.5em 1.5em no-repeat;
+.chosen-container-multi {
+	.chosen-choices {
+		position: relative;
+		overflow: hidden;
+		margin: 0;
+		padding: 0.125em 5px;
+		width: 100%;
+		border: 1px solid $shuttle;
+		border-radius: 5px;
+		background-color: $white;
+		background-image: linear-gradient(#eee 1%, #fff 15%);
+		cursor: text;
+	}
+	.chosen-choices li {
+		float: left;
+		list-style: none;
+		&.search-field {
+			margin: 0;
+			padding: 0;
+			white-space: nowrap;
+			input[type="text"] {
+				margin: 0;
+				padding: 0;
+				height: 1.6em;
+				outline: 0;
+				border: 0 !important;
+				background: transparent !important;
+				color: $shuttle;
+				box-shadow: none;
+			}
+		}
+		&.search-choice {
+			position: relative;
+			margin: 3px 5px 3px 0;
+			padding: 0 1.5em 0 5px;
+			border: 1px solid $shuttle;
+			max-width: 100%;
+			border-radius: 5px;
+			background-color: $eggshell;
+			background-image: linear-gradient(
+				#f4f4f4 20%,
+				#f0f0f0 50%,
+				#e8e8e8 52%,
+				#eee 100%
+			);
+			background-size: 100% 19px;
+			background-repeat: repeat-x;
+			background-clip: padding-box;
+			box-shadow:
+				0 0 2px #fff inset,
+				0 1px 0 rgba(#000, 0.05);
+			cursor: default;
+			span {
+				word-wrap: break-word;
+			}
+			.search-choice-close {
+				position: absolute;
+				top: 0;
+				right: 0;
+				display: block;
+				width: 1.5em;
+				height: 100%;
+				background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="%238fabb7"%3E%3Cpath d="m336-280-56-56 144-144-144-143 56-56 144 144 143-144 56 56-144 143 144 144-56 56-143-144-144 144Z"/%3E%3C/svg%3E')
+					center center / 1.5em 1.5em no-repeat;
 
-        &:hover {
-        	background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="%2351626f"%3E%3Cpath d="m336-280-56-56 144-144-144-143 56-56 144 144 143-144 56 56-144 143 144 144-56 56-143-144-144 144Z"/%3E%3C/svg%3E') center center / 1.5em 1.5em no-repeat;
-        }
-      }
-    }
-    &.search-choice-disabled {
-      padding-right: 5px;
-      border: 1px solid darken( $heather, 10% );
-      background-color: $eggshell;
-      background-image: linear-gradient(#f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eee 100%);
-      color: darken( $heather, 10% );
-    }
-    &.search-choice-focus {
-      background: $eggshell;
-      .search-choice-close {
-        background-position: -42px -10px;
-      }
-    }
-  }
-  .chosen-results {
-    margin: 0;
-    padding: 0;
-  }
-  .chosen-drop .result-selected {
-    display: list-item;
-    color: $heather;
-    cursor: default;
-  }
+				&:hover {
+					background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="%2351626f"%3E%3Cpath d="m336-280-56-56 144-144-144-143 56-56 144 144 143-144 56 56-144 143 144 144-56 56-143-144-144 144Z"/%3E%3C/svg%3E')
+						center center / 1.5em 1.5em no-repeat;
+				}
+			}
+		}
+		&.search-choice-disabled {
+			padding-right: 5px;
+			border: 1px solid darken($heather, 10%);
+			background-color: $eggshell;
+			background-image: linear-gradient(
+				#f4f4f4 20%,
+				#f0f0f0 50%,
+				#e8e8e8 52%,
+				#eee 100%
+			);
+			color: darken($heather, 10%);
+		}
+		&.search-choice-focus {
+			background: $eggshell;
+			.search-choice-close {
+				background-position: -42px -10px;
+			}
+		}
+	}
+	.chosen-results {
+		margin: 0;
+		padding: 0;
+	}
+	.chosen-drop .result-selected {
+		display: list-item;
+		color: $heather;
+		cursor: default;
+	}
 }
 /* @end */
 
 /* @group Active  */
-.chosen-container-active{
-  .chosen-single {
-    border: 1px solid $denim;
-    box-shadow: 0 0 5px rgba(#000,.3);
-  }
-  &.chosen-with-drop{
-    .chosen-single {
-      border-bottom: none;
-      border-bottom-right-radius: 0;
-      border-bottom-left-radius: 0;
-      background-image: linear-gradient(#eee 20%, #fff 80%);
-      box-shadow: none;
-      div {
-        border-left: none;
-        background: transparent;
-        b {
-		  transform: scale( 1, -1 );
-        }
-      }
-    }
-    .chosen-choices {
-      border: 1px solid $denim;
-      border-bottom: none;
-      border-bottom-right-radius: 0;
-      border-bottom-left-radius: 0;
-      box-shadow: none;
-    }
-  }
+.chosen-container-active {
+	.chosen-single {
+		border: 1px solid $denim;
+		box-shadow: 0 0 5px rgba(#000, 0.3);
+	}
+	&.chosen-with-drop {
+		.chosen-single {
+			border-bottom: none;
+			border-bottom-right-radius: 0;
+			border-bottom-left-radius: 0;
+			background-image: linear-gradient(#eee 20%, #fff 80%);
+			box-shadow: none;
+			div {
+				border-left: none;
+				background: transparent;
+				b {
+					transform: scale(1, -1);
+				}
+			}
+		}
+		.chosen-choices {
+			border: 1px solid $denim;
+			border-bottom: none;
+			border-bottom-right-radius: 0;
+			border-bottom-left-radius: 0;
+			box-shadow: none;
+		}
+	}
 }
 /* @end */
 
 /* @group Disabled Support */
 .chosen-disabled {
-  opacity: 0.5 !important;
-  cursor: default;
-  .chosen-single {
-    cursor: default;
-  }
-  .chosen-choices .search-choice .search-choice-close {
-    cursor: default;
-  }
+	opacity: 0.5 !important;
+	cursor: default;
+	.chosen-single {
+		cursor: default;
+	}
+	.chosen-choices .search-choice .search-choice-close {
+		cursor: default;
+	}
 }
 /* @end */
 
 /* @group Right to Left */
 .chosen-rtl {
-  text-align: right;
-  .chosen-single {
-    overflow: visible;
-    padding: 0 8px 0 0;
-  }
-  .chosen-single span {
-    margin-right: 0;
-    margin-left: 26px;
-    direction: rtl;
-  }
-  .chosen-single-with-deselect span {
-    margin-left: 38px;
-  }
-  .chosen-single div {
-    right: auto;
-    left: 3px;
-  }
-  .chosen-single abbr {
-    right: auto;
-    left: 26px;
-  }
-  .chosen-choices li {
-    float: right;
-    &.search-field input[type="text"] {
-      direction: rtl;
-    }
-    &.search-choice {
-      padding: 0 5px 0 1.5em;
-      .search-choice-close {
-        right: auto;
-        left: 0;
-      }
-    }
-  }
-  &.chosen-container-single .chosen-results {
-    margin: 0 0 4px 4px;
-    padding: 0 4px 0 0;
-  }
-  .chosen-results li.group-option {
-    padding-right: 1em;
-    padding-left: 0;
-  }
-  &.chosen-container-active.chosen-with-drop .chosen-single div {
-    border-right: none;
-  }
-  .chosen-search input[type="text"] {
-    padding: 4px 5px 4px 2em;
-    background-position: left;
-    direction: rtl;
-  }
+	text-align: right;
+	.chosen-single {
+		overflow: visible;
+		padding: 0 8px 0 0;
+	}
+	.chosen-single span {
+		margin-right: 0;
+		margin-left: 26px;
+		direction: rtl;
+	}
+	.chosen-single-with-deselect span {
+		margin-left: 38px;
+	}
+	.chosen-single div {
+		right: auto;
+		left: 3px;
+	}
+	.chosen-single abbr {
+		right: auto;
+		left: 26px;
+	}
+	.chosen-choices li {
+		float: right;
+		&.search-field input[type="text"] {
+			direction: rtl;
+		}
+		&.search-choice {
+			padding: 0 5px 0 1.5em;
+			.search-choice-close {
+				right: auto;
+				left: 0;
+			}
+		}
+	}
+	&.chosen-container-single .chosen-results {
+		margin: 0 0 4px 4px;
+		padding: 0 4px 0 0;
+	}
+	.chosen-results li.group-option {
+		padding-right: 1em;
+		padding-left: 0;
+	}
+	&.chosen-container-active.chosen-with-drop .chosen-single div {
+		border-right: none;
+	}
+	.chosen-search input[type="text"] {
+		padding: 4px 5px 4px 2em;
+		background-position: left;
+		direction: rtl;
+	}
 }
 
 /* @end */
@@ -411,7 +432,7 @@ $white:         #ffffff;
 	.chosen-single {
 		background: $white;
 	}
-    &.error {
+	&.error {
 		a {
 			border-color: $tomato;
 			color: $tomato;
@@ -433,4 +454,3 @@ $white:         #ffffff;
 		}
 	}
 }
-
