@@ -11,7 +11,6 @@ $white: #ffffff;
 	display: inline-block;
 	vertical-align: middle;
 	font-size: 16px;
-	max-width: 300px;
 	color: $shuttle;
 
 	user-select: none;
@@ -235,6 +234,9 @@ $white: #ffffff;
 		border-radius: 5px;
 		background-color: $white;
 		background-image: linear-gradient(#eee 1%, #fff 15%);
+		box-shadow:
+			0 0 3px #fff inset,
+			0 1px 1px rgba(#000, 0.1);
 		cursor: text;
 	}
 	.chosen-choices li {
@@ -251,7 +253,7 @@ $white: #ffffff;
 				outline: 0;
 				border: 0 !important;
 				background: transparent !important;
-				color: $shuttle;
+				color: darken($heather, 10%);
 				box-shadow: none;
 			}
 		}
@@ -330,7 +332,10 @@ $white: #ffffff;
 .chosen-container-active {
 	.chosen-single {
 		border: 1px solid $denim;
-		box-shadow: 0 0 5px rgba(#000, 0.3);
+		box-shadow: 0 0 0px 1px $denim;
+	}
+	.chosen-choices {
+		box-shadow: 0 0 0px 1px $denim;
 	}
 	&.chosen-with-drop {
 		.chosen-single {
