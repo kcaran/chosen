@@ -1,6 +1,6 @@
 $denim: #0079b6;
 $eggshell: #f4f5f6;
-$heather: #aec2cb;
+$gull: #8fabb7;
 $shuttle: #51626f;
 $tomato: #c23a28;
 $white: #ffffff;
@@ -65,7 +65,7 @@ $white: #ffffff;
 		overflow: hidden;
 		padding: 0 0 0 8px;
 		width: 100%;
-		height: 2em;
+		height: calc(2em + 2px);
 		border: 1px solid $shuttle;
 		border-radius: 5px;
 		color: $shuttle;
@@ -77,10 +77,9 @@ $white: #ffffff;
 			0 1px 1px rgba(#000, 0.1);
 		text-decoration: none;
 		white-space: nowrap;
-		line-height: 1.8em;
 	}
 	.chosen-default {
-		color: darken($heather, 10%);
+		color: $denim;
 	}
 	.chosen-single span {
 		display: block;
@@ -100,7 +99,7 @@ $white: #ffffff;
 		right: 1.5em;
 		width: 1.5em;
 		height: 100%;
-		background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="%238fabb7"%3E%3Cpath d="m336-280-56-56 144-144-144-143 56-56 144 144 143-144 56 56-144 143 144 144-56 56-143-144-144 144Z"/%3E%3C/svg%3E')
+		background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="%230079b6"%3E%3Cpath d="m336-280-56-56 144-144-144-143 56-56 144 144 143-144 56 56-144 143 144 144-56 56-143-144-144 144Z"/%3E%3C/svg%3E')
 			center center / 1.5em 1.5em no-repeat;
 		&:hover {
 			background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="%2351626f"%3E%3Cpath d="m336-280-56-56 144-144-144-143 56-56 144 144 143-144 56 56-144 143 144 144-56 56-143-144-144 144Z"/%3E%3C/svg%3E')
@@ -118,8 +117,8 @@ $white: #ffffff;
 			display: block;
 			width: 100%;
 			height: 100%;
-			$arrow_color: darken($heather, 10%);
-			$down_arrow: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" height="400" width="400" fill="%238fabb7"%3E%3Cpolygon points="200,250 10,60 390,60" class="triangle" /%3E%3C/svg%3E')
+			$arrow_color: $denim;
+			$down_arrow: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" height="400" width="400" fill="%230079b6"%3E%3Cpolygon points="200,250 10,60 390,60" class="triangle" /%3E%3C/svg%3E')
 				50% 66% / 0.8em 1em no-repeat;
 			background: $down_arrow;
 
@@ -190,7 +189,7 @@ $white: #ffffff;
 		}
 		&.disabled-result {
 			display: list-item;
-			color: $heather;
+			color: $gull;
 			cursor: default;
 		}
 		&.highlighted {
@@ -228,7 +227,7 @@ $white: #ffffff;
 		position: relative;
 		overflow: hidden;
 		margin: 0;
-		padding: 0.125em 5px;
+		padding: 0 4px;
 		width: 100%;
 		border: 1px solid $shuttle;
 		border-radius: 5px;
@@ -249,11 +248,11 @@ $white: #ffffff;
 			input[type="text"] {
 				margin: 0;
 				padding: 0;
-				height: 1.6em;
+				height: 2em;
 				outline: 0;
 				border: 0 !important;
 				background: transparent !important;
-				color: darken($heather, 10%);
+				color: $denim;
 				box-shadow: none;
 			}
 		}
@@ -299,7 +298,7 @@ $white: #ffffff;
 		}
 		&.search-choice-disabled {
 			padding-right: 5px;
-			border: 1px solid darken($heather, 10%);
+			border: 1px solid $gull;
 			background-color: $eggshell;
 			background-image: linear-gradient(
 				#f4f4f4 20%,
@@ -307,7 +306,7 @@ $white: #ffffff;
 				#e8e8e8 52%,
 				#eee 100%
 			);
-			color: darken($heather, 10%);
+			color: $gull;
 		}
 		&.search-choice-focus {
 			background: $eggshell;
@@ -322,7 +321,7 @@ $white: #ffffff;
 	}
 	.chosen-drop .result-selected {
 		display: list-item;
-		color: $heather;
+		color: $gull;
 		cursor: default;
 	}
 }
